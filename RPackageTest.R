@@ -24,21 +24,14 @@ pacman::p_load(
 
 devtools::has_devel()
 
-#' Title
-#'
-#' @param F_temp
-#'
-#' @return
-#' @export
-#'
-#' @examples
-F_to_C <- function(F_temp){
-  C_temp <- (F_temp - 32) * 5/9;
-  return(C_temp);
-}
 
-C_to_F <- function(C_temp){
-  F_temp <- (C_temp * 9/5) + 32;
-  return(F_temp);
-}
+# use_r("F_to_C")
+# use_r("C_to_F")
+
+# with devtools attached and
+# working directory set to top-level of your source package ...
+load_all()
+C_to_F(20)
+exists("C_to_F", where = globalenv(), inherits = FALSE)
+#> [1] FALSE
 
