@@ -32,6 +32,10 @@ devtools::has_devel()
 # working directory set to top-level of your source package ...
 load_all()
 C_to_F(20)
+F_to_C(30)
+
 exists("C_to_F", where = globalenv(), inherits = FALSE)
 #> [1] FALSE
+
+library(RPackageDemo)
 
